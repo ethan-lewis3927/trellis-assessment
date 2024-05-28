@@ -1,5 +1,5 @@
 from flask import Flask
-from predict import predict_blueprint
+from API.predict import predict_blueprint
 
 app = Flask(__name__)
 

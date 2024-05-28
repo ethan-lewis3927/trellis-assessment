@@ -5,7 +5,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from sklearn.feature_extraction.text import TfidfVectorizer
-from preprocessor import Preprocessor
+from trainer.preprocessor import Preprocessor
 import joblib
 
 class Trainer:
@@ -57,8 +57,8 @@ class Trainer:
 
 # Example usage
 if __name__ == "__main__":
-    base_path = '../trellis_assessment_ds'
-    model_save_path = 'models/'
+    base_path = 'trellis_assessment_ds'
+    model_save_path = 'trainer/models/'
     directories = ['business', 'entertainment', 'food', 'graphics', 'historical', 'medical', 'other', 'politics', 'space', 'sport', 'technologie']
 
     # Define the preprocessor

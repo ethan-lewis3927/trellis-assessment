@@ -1,14 +1,14 @@
 from flask import Blueprint, request, jsonify
 import joblib
 import numpy as np
-from preprocessor import Preprocessor
+from API.preprocessor import Preprocessor
 
 predict_blueprint = Blueprint('predict', __name__)
 
 # Load the trained model, vectorizer, and label encoder
-model = joblib.load('../trainer/models/log_reg_model.pkl')
-vectorizer = joblib.load('../trainer/models/tfidf_vectorizer.pkl')
-label_encoder = joblib.load('../trainer/models/label_encoder.pkl')
+model = joblib.load('trainer/models/log_reg_model.pkl')
+vectorizer = joblib.load('trainer/models/tfidf_vectorizer.pkl')
+label_encoder = joblib.load('trainer/models/label_encoder.pkl')
 num_labels = len(label_encoder.classes_)
 
 # Create Preprocessor instance
