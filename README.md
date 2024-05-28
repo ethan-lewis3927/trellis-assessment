@@ -1,7 +1,7 @@
 # trellis-assessment
 
 ## Description
-Model and API code for tellis take home assesment
+Model and API code for trellis take home assesment
 
 ## Setup
 
